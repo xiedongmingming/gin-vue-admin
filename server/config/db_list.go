@@ -30,6 +30,7 @@ type GeneralDB struct {
 }
 
 func (c GeneralDB) LogLevel() logger.LogLevel {
+
 	switch strings.ToLower(c.LogMode) {
 	case "silent", "Silent":
 		return logger.Silent
@@ -42,6 +43,7 @@ func (c GeneralDB) LogLevel() logger.LogLevel {
 	default:
 		return logger.Info
 	}
+
 }
 
 type SpecializedDB struct {

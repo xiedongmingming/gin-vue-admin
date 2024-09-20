@@ -18,7 +18,9 @@ type _gorm struct{}
 // Config gorm 自定义配置
 // Author [SliverHorn](https://github.com/SliverHorn)
 func (g *_gorm) Config(prefix string, singular bool) *gorm.Config {
+
 	var general config.GeneralDB
+
 	switch global.GVA_CONFIG.System.DbType {
 	case "mysql":
 		general = global.GVA_CONFIG.Mysql.GeneralDB
@@ -33,6 +35,7 @@ func (g *_gorm) Config(prefix string, singular bool) *gorm.Config {
 	default:
 		general = global.GVA_CONFIG.Mysql.GeneralDB
 	}
+
 	return &gorm.Config{
 		Logger: logger.New(NewWriter(general, log.New(os.Stdout, "\r\n", log.LstdFlags)), logger.Config{
 			SlowThreshold: 200 * time.Millisecond,
@@ -45,4 +48,5 @@ func (g *_gorm) Config(prefix string, singular bool) *gorm.Config {
 		},
 		DisableForeignKeyConstraintWhenMigrating: true,
 	}
+
 }

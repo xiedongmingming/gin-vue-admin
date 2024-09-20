@@ -14,6 +14,7 @@ var Mongo = new(mongo)
 type mongo struct{}
 
 func (m *mongo) GetClientOptions() []options.ClientOptions {
+
 	cmdMonitor := &event.CommandMonitor{
 		Started: func(ctx context.Context, event *event.CommandStartedEvent) {
 			zap.L().Info(fmt.Sprintf("[MongoDB][RequestID:%d][database:%s] %s\n", event.RequestID, event.DatabaseName, event.Command), zap.String("business", "mongo"))
@@ -25,5 +26,7 @@ func (m *mongo) GetClientOptions() []options.ClientOptions {
 			zap.L().Error(fmt.Sprintf("[MongoDB][RequestID:%d] [%s] %s\n", event.RequestID, event.Duration.String(), event.Failure), zap.String("business", "mongo"))
 		},
 	}
+
 	return []options.ClientOptions{{ClientOptions: &opt.ClientOptions{Monitor: cmdMonitor}}}
+
 }

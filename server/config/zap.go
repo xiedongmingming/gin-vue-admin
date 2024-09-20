@@ -19,18 +19,25 @@ type Zap struct {
 
 // Levels 根据字符串转化为 zapcore.Levels
 func (c *Zap) Levels() []zapcore.Level {
+
 	levels := make([]zapcore.Level, 0, 7)
+
 	level, err := zapcore.ParseLevel(c.Level)
+
 	if err != nil {
 		level = zapcore.DebugLevel
 	}
+
 	for ; level <= zapcore.FatalLevel; level++ {
 		levels = append(levels, level)
 	}
+
 	return levels
+
 }
 
 func (c *Zap) Encoder() zapcore.Encoder {
+
 	config := zapcore.EncoderConfig{
 		TimeKey:       "time",
 		NameKey:       "name",
@@ -46,9 +53,11 @@ func (c *Zap) Encoder() zapcore.Encoder {
 		EncodeCaller:   zapcore.FullCallerEncoder,
 		EncodeDuration: zapcore.SecondsDurationEncoder,
 	}
+
 	if c.Format == "json" {
 		return zapcore.NewJSONEncoder(config)
 	}
+
 	return zapcore.NewConsoleEncoder(config)
 
 }
@@ -56,6 +65,7 @@ func (c *Zap) Encoder() zapcore.Encoder {
 // LevelEncoder 根据 EncodeLevel 返回 zapcore.LevelEncoder
 // Author [SliverHorn](https://github.com/SliverHorn)
 func (c *Zap) LevelEncoder() zapcore.LevelEncoder {
+
 	switch {
 	case c.EncodeLevel == "LowercaseLevelEncoder": // 小写编码器(默认)
 		return zapcore.LowercaseLevelEncoder
@@ -68,4 +78,5 @@ func (c *Zap) LevelEncoder() zapcore.LevelEncoder {
 	default:
 		return zapcore.LowercaseLevelEncoder
 	}
+
 }

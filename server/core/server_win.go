@@ -11,6 +11,7 @@ import (
 )
 
 func initServer(address string, router *gin.Engine) server {
+
 	return &http.Server{
 		Addr:           address,
 		Handler:        router,
@@ -18,4 +19,5 @@ func initServer(address string, router *gin.Engine) server {
 		WriteTimeout:   10 * time.Minute,
 		MaxHeaderBytes: 1 << 20,
 	}
+
 }

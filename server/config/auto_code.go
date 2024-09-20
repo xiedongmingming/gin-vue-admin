@@ -14,9 +14,13 @@ type Autocode struct {
 }
 
 func (a *Autocode) WebRoot() string {
+
 	webs := strings.Split(a.Web, "/")
+
 	if len(webs) == 0 {
 		webs = strings.Split(a.Web, "\\")
 	}
+
 	return filepath.Join(webs...)
+	
 }

@@ -2,10 +2,12 @@ package core
 
 import (
 	"fmt"
+
+	"go.uber.org/zap"
+
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/initialize"
 	"github.com/flipped-aurora/gin-vue-admin/server/service/system"
-	"go.uber.org/zap"
 )
 
 type server interface {
@@ -13,19 +15,24 @@ type server interface {
 }
 
 func RunWindowsServer() {
+
 	if global.GVA_CONFIG.System.UseMultipoint || global.GVA_CONFIG.System.UseRedis {
-		// 初始化redis服务
+		// 初始化REDIS服务
 		initialize.Redis()
 		initialize.RedisList()
 	}
 
 	if global.GVA_CONFIG.System.UseMongo {
+
 		err := initialize.Mongo.Initialization()
+
 		if err != nil {
 			zap.L().Error(fmt.Sprintf("%+v", err))
 		}
+
 	}
-	// 从db加载jwt数据
+
+	// 从DB加载JWT数据
 	if global.GVA_DB != nil {
 		system.LoadAll()
 	}
@@ -34,6 +41,7 @@ func RunWindowsServer() {
 	Router.Static("/form-generator", "./resource/page")
 
 	address := fmt.Sprintf(":%d", global.GVA_CONFIG.System.Addr)
+
 	s := initServer(address, Router)
 
 	global.GVA_LOG.Info("server run success on ", zap.String("address", address))
@@ -52,5 +60,7 @@ func RunWindowsServer() {
 	** 版权持有公司：北京翻转极光科技有限责任公司 **
 	** 剔除授权标识需购买商用授权：https://gin-vue-admin.com/empower/index.html **
 `, address)
+
 	global.GVA_LOG.Error(s.ListenAndServe().Error())
+
 }

@@ -9,8 +9,7 @@
 <img src="https://img.shields.io/badge/element--plus-2.3.8-green"/>
 <img src="https://img.shields.io/badge/gorm-1.25.2-red"/>
 </div>
-
-[English](./README-en.md) | 简体中文
+[ENGLISH](./README-en.md) | 简体中文
 
 # 项目文档
 [在线文档](https://www.gin-vue-admin.com) : https://www.gin-vue-admin.com
@@ -19,7 +18,7 @@
 						       
 [从环境到部署教学视频](https://www.bilibili.com/video/BV1Rg411u7xH)
 
-[开发教学](https://www.gin-vue-admin.com/guide/start-quickly/env.html) (贡献者:  <a href="https://github.com/LLemonGreen">LLemonGreen</a> And <a href="https://github.com/fkk0509">Fann</a>)
+[开发教学](https://www.gin-vue-admin.com/guide/start-quickly/env.html) (贡献者:  <a href="https://github.com/LLemonGreen">LLEMONGREEN</a> AND <a href="https://github.com/fkk0509">FANN</a>)
 
 [交流社区](https://support.qq.com/products/371961)
 
@@ -27,13 +26,13 @@
 
 # 重要提示
 
-1.本项目从起步到开发到部署均有文档和详细视频教程
+1. 本项目从起步到开发到部署均有文档和详细视频教程
 
-2.本项目需要您有一定的golang和vue基础
+2.本项目需要您有一定的GOLANG和VUE基础
 
 3.您完全可以通过我们的教程和文档完成一切操作，因此我们不再提供免费的技术服务，如需服务请进行[付费支持](https://www.gin-vue-admin.com/coffee/payment.html)
 
-4.如果您将此项目用于商业用途，请遵守Apache2.0协议并保留作者技术支持声明。您需保留如下版权声明信息，以及日志和代码中所包含的版权声明信息。所需保留信息均为文案性质，不会影响任何业务内容，如决定商用且必须剔除请[购买授权](https://www.gin-vue-admin.com/empower/index.html)
+4.如果您将此项目用于商业用途，请遵守APACHE2.0协议并保留作者技术支持声明。您需保留如下版权声明信息，以及日志和代码中所包含的版权声明信息。所需保留信息均为文案性质，不会影响任何业务内容，如决定商用且必须剔除请[购买授权](https://www.gin-vue-admin.com/empower/index.html)
 
 <img src="https://qmplusimg.henrongyi.top/openSource/login.jpg" width="1000">
 
@@ -43,7 +42,7 @@
 
 ### 1.1 项目介绍
 
-> Gin-vue-admin是一个基于 [vue](https://vuejs.org) 和 [gin](https://gin-gonic.com) 开发的全栈前后端分离的开发基础平台，集成jwt鉴权，动态路由，动态菜单，casbin鉴权，表单生成器，代码生成器等功能，提供多种示例文件，让您把更多时间专注在业务开发上。
+> GIN-VUE-ADMIN是一个基于[VUE](https://vuejs.org)和[GIN](https://gin-gonic.com)开发的全栈前后端分离的开发基础平台，集成JWT鉴权，动态路由，动态菜单，CASBIN鉴权，表单生成器，代码生成器等功能，提供多种示例文件，让您把更多时间专注在业务开发上。
 
 [在线预览](http://demo.gin-vue-admin.com): http://demo.gin-vue-admin.com
 
@@ -52,46 +51,46 @@
 测试密码：123456
 
 ### 1.2 贡献指南
-Hi! 首先感谢你使用 gin-vue-admin。
+HI! 首先感谢你使用GIN-VUE-ADMIN。
 
-Gin-vue-admin 是一套为快速研发准备的一整套前后端分离架构式的开源框架，旨在快速搭建中小型项目。
+GIN-VUE-ADMIN是一套为快速研发准备的一整套前后端分离架构式的开源框架，旨在快速搭建中小型项目。
 
-Gin-vue-admin 的成长离不开大家的支持，如果你愿意为 gin-vue-admin 贡献代码或提供建议，请阅读以下内容。
+GIN-VUE-ADMIN的成长离不开大家的支持，如果你愿意为GIN-VUE-ADMIN贡献代码或提供建议，请阅读以下内容。
 
-#### 1.2.1 Issue 规范
-- issue 仅用于提交 Bug 或 Feature 以及设计相关的内容，其它内容可能会被直接关闭。
-									      
-- 在提交 issue 之前，请搜索相关内容是否已被提出。
+#### 1.2.1 ISSUE规范
+- ISSUE仅用于提交BUG或FEATURE以及设计相关的内容，其它内容可能会被直接关闭。
+	
+- 在提交ISSUE之前，请搜索相关内容是否已被提出。
 
-#### 1.2.2 Pull Request 规范
-- 请先 fork 一份到自己的项目下，不要直接在仓库下建分支。
+#### 1.2.2 PULL REQUEST规范
+- 请先FORK一份到自己的项目下，不要直接在仓库下建分支。
 
-- commit 信息要以`[文件名]: 描述信息` 的形式填写，例如 `README.md: fix xxx bug`。
+- COMMIT信息要以`[文件名]: 描述信息`的形式填写，例如`README.md: fix xxx bug`。
 
-- 如果是修复 bug，请在 PR 中给出描述信息。
+- 如果是修复BUG，请在PR中给出描述信息。
 
-- 合并代码需要两名维护人员参与：一人进行 review 后 approve，另一人再次 review，通过后即可合并。
+- 合并代码需要两名维护人员参与：一人进行REVIEW后APPROVE，另一人再次REVIEW，通过后即可合并。
 
 ## 2. 使用说明
 
 ```
-- node版本 > v16.8.3
-- golang版本 >= v1.22
-- IDE推荐：Goland
+- NODE版本 > v16.8.3
+- GOLANG版本 >= v1.22
+- IDE推荐：GOLAND
 ```
 
-### 2.1 server项目
+### 2.1 SERVER项目
 
-使用 `Goland` 等编辑工具，打开server目录，不可以打开 gin-vue-admin 根目录
+使用`GOLAND`等编辑工具，打开SERVER目录，不可以打开GIN-VUE-ADMIN根目录
 
 ```bash
 
 # 克隆项目
 git clone https://github.com/flipped-aurora/gin-vue-admin.git
-# 进入server文件夹
+# 进入SERVER文件夹
 cd server
 
-# 使用 go mod 并安装go依赖包
+# 使用GO-MOD并安装GO依赖包
 go generate
 
 # 运行
@@ -99,22 +98,22 @@ go run .
 
 ```
 
-### 2.2 web项目
+### 2.2 WEB项目
 
 ```bash
-# 进入web文件夹
+# 进入WEB文件夹
 cd web
 
 # 安装依赖
 npm install
 
-# 启动web项目
+# 启动WEB项目
 npm run serve
 ```
 
-### 2.3 swagger自动化API文档
+### 2.3 SWAGGER自动化API文档
 
-#### 2.3.1 安装 swagger
+#### 2.3.1 安装SWAGGER
 
 ``` shell
 go install github.com/swaggo/swag/cmd/swag@latest
@@ -127,13 +126,13 @@ cd server
 swag init
 ````
 
-> 执行上面的命令后，server目录下会出现docs文件夹里的 `docs.go`, `swagger.json`, `swagger.yaml` 三个文件更新，启动go服务之后, 在浏览器输入 [http://localhost:8888/swagger/index.html](http://localhost:8888/swagger/index.html) 即可查看swagger文档
+> 执行上面的命令后，SERVER目录下会出现DOCS文件夹里的`docs.go`, `swagger.json`, `swagger.yaml`三个文件更新，启动GO服务之后，在浏览器输入[http://localhost:8888/swagger/index.html](http://localhost:8888/swagger/index.html)即可查看SWAGGER文档
 
-### 2.4 VSCode工作区
+### 2.4 VSCODE工作区
 
 #### 2.4.1 开发
 
-使用`VSCode`打开根目录下的工作区文件`gin-vue-admin.code-workspace`，在边栏可以看到三个虚拟目录：`backend`、`frontend`、`root`。
+使用`VSCODE`打开根目录下的工作区文件`gin-vue-admin.code-workspace`，在边栏可以看到三个虚拟目录：`backend`、`frontend`、`root`。
 
 #### 2.4.2 运行/调试
 
@@ -271,16 +270,16 @@ swag init
 
 ## 5. 主要功能
 
-- 权限管理：基于`jwt`和`casbin`实现的权限管理。
-- 文件上传下载：实现基于`七牛云`, `阿里云`, `腾讯云` 的文件上传操作(请开发自己去各个平台的申请对应 `token` 或者对应`key`)。
-- 分页封装：前端使用 `mixins` 封装分页，分页方法调用 `mixins` 即可。
+- 权限管理：基于`JWT`和`CASBIN`实现的权限管理。
+- 文件上传下载：实现基于`七牛云`，`阿里云`，`腾讯云` 的文件上传操作（请开发自己去各个平台的申请对应`TOKEN`或者对应`KEY`)。
+- 分页封装：前端使用`MIXINS`封装分页，分页方法调用`MIXINS`即可。
 - 用户管理：系统管理员分配用户角色和角色权限。
-- 角色管理：创建权限控制的主要对象，可以给角色分配不同api权限和菜单权限。
+- 角色管理：创建权限控制的主要对象，可以给角色分配不同API权限和菜单权限。
 - 菜单管理：实现用户动态菜单配置，实现不同角色不同菜单。
-- api管理：不同用户可调用的api接口的权限不同。
+- API管理：不同用户可调用的API接口的权限不同。
 - 配置管理：配置文件可前台修改(在线体验站点不开放此功能)。
 - 条件搜索：增加条件搜索示例。
-- restful示例：可以参考用户管理模块中的示例API。
+- RESTFUL示例：可以参考用户管理模块中的示例API。
 	- 前端文件参考: [web/src/view/superAdmin/api/api.vue](https://github.com/flipped-aurora/gin-vue-admin/blob/master/web/src/view/superAdmin/api/api.vue)
     - 后台文件参考: [server/router/sys_api.go](https://github.com/flipped-aurora/gin-vue-admin/blob/master/server/router/sys_api.go)
 - 多点登录限制：需要在`config.yaml`中把`system`中的`use-multipoint`修改为true(需要自行配置Redis和Config中的Redis参数，测试阶段，有bug请及时反馈)。
@@ -294,7 +293,7 @@ swag init
 
 > https://www.yuque.com/flipped-aurora
 >
->内有前端框架教学视频。如果觉得项目对您有所帮助可以添加我的个人微信:shouzi_1994，欢迎您提出宝贵的需求。
+>内有前端框架教学视频。如果觉得项目对您有所帮助可以添加我的个人微信：shouzi_1994，欢迎您提出宝贵的需求。
 
 ## 6.2 教学视频
 
@@ -306,15 +305,15 @@ swag init
 
 > https://www.bilibili.com/video/BV1x44y117TT/
 
-（3）golang基础教学视频
+（3）GOLANG基础教学视频
 
 > bilibili：https://space.bilibili.com/322210472/channel/detail?cid=108884
 
-（4）gin框架基础教学
+（4）GIN框架基础教学
 
 > bilibili：https://space.bilibili.com/322210472/channel/detail?cid=126418&ctype=0
 
-（5）gin-vue-admin 版本更新介绍视频
+（5）GIN-VUE-ADMIN版本更新介绍视频
 
 > bilibili：https://www.bilibili.com/video/BV1kv4y1g7nT
 
@@ -353,4 +352,4 @@ fmt.Println(decodeBytes, err)
 
 ## 10. 商用注意事项
 
-如果您将此项目用于商业用途，请遵守Apache2.0协议并保留作者技术支持声明。
+如果您将此项目用于商业用途，请遵守APACHE2.0协议并保留作者技术支持声明。

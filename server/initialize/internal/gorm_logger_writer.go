@@ -18,7 +18,9 @@ func NewWriter(config config.GeneralDB, writer logger.Writer) *Writer {
 
 // Printf 格式化打印日志
 func (c *Writer) Printf(message string, data ...any) {
+
 	if c.config.LogZap {
+
 		switch c.config.LogLevel() {
 		case logger.Silent:
 			zap.L().Debug(fmt.Sprintf(message, data...))
@@ -31,7 +33,11 @@ func (c *Writer) Printf(message string, data ...any) {
 		default:
 			zap.L().Info(fmt.Sprintf(message, data...))
 		}
+
 		return
+
 	}
+
 	c.writer.Printf(message, data...)
+
 }

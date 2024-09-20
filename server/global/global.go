@@ -41,26 +41,38 @@ var (
 
 // GetGlobalDBByDBName 通过名称获取db list中的db
 func GetGlobalDBByDBName(dbname string) *gorm.DB {
+
 	lock.RLock()
 	defer lock.RUnlock()
+
 	return GVA_DBList[dbname]
+
 }
 
 // MustGetGlobalDBByDBName 通过名称获取db 如果不存在则panic
 func MustGetGlobalDBByDBName(dbname string) *gorm.DB {
+
 	lock.RLock()
 	defer lock.RUnlock()
+
 	db, ok := GVA_DBList[dbname]
+
 	if !ok || db == nil {
 		panic("db no init")
 	}
+
 	return db
+
 }
 
 func GetRedis(name string) redis.UniversalClient {
+
 	redis, ok := GVA_REDISList[name]
+
 	if !ok || redis == nil {
 		panic(fmt.Sprintf("redis `%s` no init", name))
 	}
+
 	return redis
+
 }
